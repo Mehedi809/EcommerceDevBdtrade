@@ -1,0 +1,46 @@
+@media( max-width:1000px ){
+    .thisimg{
+        width: 48%;
+        height: auto;
+        margin-bottom: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .menu ul{
+        display: none;
+    }
+
+    /* .menu-toggle {
+        display: block;
+      } */
+}
+
+@media( max-width:500px ){
+    .thisimg{
+        width: 96%;
+        height: auto;
+        margin-bottom: 15px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+ @media (max-width: 1000px) {
+    .menu-toggle {
+      display: block;
+      padding-top: 10px;
+    }
+  
+    /* .navbar ul {
+      display: none;
+    } */
+  }
+  
+
+   

@@ -1,0 +1,47 @@
+{% extends 'store/base.html' %}
+
+        {% block eshop_content %}
+        {% load static %}
+        <br>
+        <br>
+        <br>
+        <section>
+          <header>
+            <h1>PRODUCT DETAIL PAGE</h1>
+          </header>
+          <div data-product-detail>
+            <div class="img-card">
+              <div class='img'>
+                <i class="far fa-heart"></i>
+                <img src="{{ product.image.url }}" />
+              </div>
+              <div class='img-options'>
+                <div><img src="{{ product.image.url }}" /></div>
+                <div><img src="{{ product.image.url }}" /></div>
+                <div><img src="{{ product.image.url }}" /></div>
+                <div><img src="{{ product.image.url }}" /></div>
+              </div>
+            </div>
+            <div class="product-details">
+              <h2>{{ product.name }}</h2>
+              <p>{{ product.description }}</p>
+              <p>Price</p>
+              <p><span>{{ product.price }}</span></p>
+              <p>Available in 5 colors</p>
+              <div class="sample-colors">
+                <div>
+                  <div id='circle'></div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <a href="{% url 'add_to_cart' product.pk %}"><button>Add To cart</button></a>
+              <a href="{% url 'remove_from_cart' product.pk %}"><button>Remove from cart</button></a>
+              
+            </div>    
+          </div>
+        </section>
+        {% endblock eshop_content %}
+  

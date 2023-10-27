@@ -1,0 +1,156 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block eshop_content %}
+<div id="home-menu">
+    <div class="home">
+        <div class="container">
+            <div class="hi"><h1>about us</h1></div>
+            <div class="main-2">
+                {% for c in banner %}
+                <div class="pera-1"><img src="{{ c.image.url }}" alt="#"></div>
+                <div class="pera-2">
+                    <h3>{{ c.title }}</h3>
+                    <p>{{ c.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+</div><!--about us end-->
+
+<div id="men-1">
+    <div class="gents-1">
+        <div class="container">
+            <div class="gents-2">
+                <h1>mens collection</h1>
+            </div>
+            <div class="gents-3">
+                {% for c in page_obj %}
+                <div class="thisimg">
+                    <a href="{% url 'product_detail' c.pk  %}">
+                        <img src="{{ c.image.url }}" alt="#">
+                    </a>
+                    <div class="price">
+                        <button>Tk : {{ c.price }}</button>
+                    </div>
+                    <div class="price-1">
+                        <h4>{{ c.name }}</h4>
+                        <a href="{% url 'product_detail' c.pk  %}">
+                            <button type="submit">Details</button>
+                        </a>
+                        
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- paginator -->
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+<!--mens collection-->
+
+<div id="women-1">
+    <div class="wogents-1">
+        <div class="container">
+            <div class="gents-2">
+                <h1>womens collection</h1>
+            </div>
+            <div class="gents-3">
+                {% for c in womens %}
+                <div class="thisimg">     
+                    <a href="{% url 'product_detail' c.pk  %}">
+                        <img src="{{ c.image.url }}" alt="#">
+                    </a>
+                    <div class="price">
+                        <h3>Tk : {{ c.price }}</h3>
+                    </div>
+                    <div class="price-1">
+                        <h4>{{ c.name }}</h4>
+                        <a href="{% url 'product_detail' c.pk  %}">
+                            <button type="submit">Details</button>
+                        </a>
+                    </div>                  
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div><!--womens collection-->
+<div id="kids-1">
+    <div class="wogents-1">
+        <div class="container">
+            <div class="gents-2">
+                <h1>kids collection</h1>
+            </div>
+            <div class="gents-3">
+                {% for c in kids %}
+                <div class="thisimg">
+                    <a href="{% url 'product_detail' c.pk  %}">
+                        <img src="{{ c.image.url }}" alt="#">
+                    </a>
+                    <div class="price">
+                        <h3>Tk : {{ c.price }}</h3>
+                    </div>
+                    <div class="price-1">
+                        <h4>{{ c.name }}</h4>
+                        <a href="{% url 'product_detail' c.pk  %}">
+                            <button type="submit">Details</button>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div><!--kis collection-->
+<div id="wedding-1">
+    <div class="wogents-1">
+        <div class="container">
+            <div class="gents-2">
+                <h1>wedding collection</h1>
+            </div>
+            <div class="gents-3">
+                {% for c in wedding %}
+                <div class="thisimg">
+                    <a href="{% url 'product_detail' c.pk %}">
+                        <img src="{{ c.image.url }}" alt="#">
+                    </a>
+                    <div class="price">
+                        <h3>Tk : {{ c.price }}</h3>
+                    </div>
+                    <div class="price-1">
+                        <h4>{{ c.name }}</h4>
+                        <a href="{% url 'product_detail' c.pk  %}">
+                            <button type="submit">Details</button>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div><!--wedding collection-->
+
+
+
+{% endblock eshop_content %}

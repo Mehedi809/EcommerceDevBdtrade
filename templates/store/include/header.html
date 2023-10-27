@@ -1,0 +1,33 @@
+{% load static %}
+
+<header class="eco-1">
+    <div class="container">
+        <div class="main-1">
+            <div class="logo"><img src="img/4.jpg" alt="img"></div>
+        
+            <nav class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">about</a></li>
+                    <li><a href="#men-1">mens</a></li>
+                    <li><a href="#women-1">women</a></li>
+                    <li><a href="#kids-1">kids</a></li>
+                    <li><a href="#wedding-1">wedding</a></li>
+                    <li><a href="{% url 'scrape' %}">scraping</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">☰</div>
+            
+            <nav class="login">
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">logout</a></li>
+                    {% else %}
+                    <li><a href="{% url 'login' %}">login</a></li>
+                    <li><a href="{% url 'Registration' %}">sign up</a></li>
+                    {% endif %}
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header> <!--header end-->
