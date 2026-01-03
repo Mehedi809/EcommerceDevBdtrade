@@ -66,7 +66,7 @@ class OrderedProduct(models.Model):
 
 
 
-#scrap
+#data scraping and store database
 
 class ScrapeProduct1(models.Model):
     id=models.AutoField(primary_key=True)
