@@ -1,17 +1,35 @@
-# EcommerceDevBdtrade
-Assignment Title: E-commerce Site Development
-1. User Registration and Sign-in
-• Implement user signup and signin functionality.
-2. Shopping Cart and Order Placement
-• Enable users to add items to their shopping cart and place orders.
-• Users should be able to register/sign in before placing an order.
-3. Python Script for Web Scraping
-• Create a Python script for web scraping data from any e-commerce site.
-• The script should be structured as a Django management script.
-• This script allows running a command to fetch data from an e-commerce site and 
-visualize it within your e-commerce site.
-4. Pagination
-• Implement pagination to improve the browsing experience.
-5. Responsive Design
-• Ensure that all pages are responsive and compatible with various devices and screen 
-sizes
+# E-Commerce Website (Backend)
+
+A full-stack e-commerce application built with Django that includes user authentication, product catalog, shopping cart, ordering, and supports responsive UI interaction.
+
+---
+
+## 🔥 Features
+- User registration, login & authentication
+- Product listing and detail pages
+- Shopping cart and order placement
+- Pagination for efficient browsing
+- Django admin panel for product/order management
+- Web scraping script for importing data
+- Responsive front-end interaction (templates + CSS/JS)
+
+---
+
+## 🧠 Tech Stack
+- **Backend:** Python, Django
+- **Database:** SQLite 
+- **Front-end:** HTML, CSS, JavaScript (template integration)
+- **Tools:** Git, GitHub
+
+---
+
+## 👨‍💻 My Role
+- Designed and developed backend logic using Django
+- Implemented user authentication and shopping cart features
+- Built product, order, and user models
+- Added pagination and UI interaction
+- Created web scraping command using Django custom management
+- Tested and debugged features for stable performance
+
+---
+
